@@ -1,3 +1,4 @@
+;; turn on org-mode for .org files
 (add-to-list 'auto-mode-alist '("\\.org\\'" . org-mode))
 
 (defun copy-from-osx ()
@@ -93,24 +94,6 @@ same directory as the org-buffer and insert a link to this file."
  '((gnuplot . t)))
 ;; add additional languages with '((language . t)))
 
-;; AucTeX
-(setq TeX-auto-save t)
-(setq TeX-parse-self t)
-(setq TeX-PDF-mode t)
-(setq latex-run-command "pdflatex")
-; Turn on RefTeX for AUCTeX, http://www.gnu.org/s/auctex/manual/reftex/reftex_5.html
-(add-hook 'LaTeX-mode-hook 'turn-on-reftex)
-; Make RefTeX interact with AUCTeX, http://www.gnu.org/s/auctex/manual/reftex/AUCTeX_002dRefTeX-Interface.html
-(setq reftex-plug-into-AUCTeX t)
-
-;; Set Environment for LaTeX
- (getenv "PATH")
-  (setenv "PATH"
- (concat
-  "/opt/local/bin" ":"
- ;;  "/opt/local/bin" ":"
- (getenv "PATH")))
-
 ;; Initialize org Babel for Python
 (org-babel-do-load-languages
  'org-babel-load-languages
@@ -168,8 +151,27 @@ same directory as the org-buffer and insert a link to this file."
 (add-to-list 'auto-mode-alist '("\\.markdown\\'". markdown-mode))
 (add-to-list 'auto-mode-alist '("\\.md\\'". markdown-mode))
 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; Latex settings ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;; Set Environment for LaTeX
+ (getenv "PATH")
+  (setenv "PATH"
+ (concat
+  "/opt/local/bin" ":"
+ (getenv "PATH")))
+
 ;; setup files ending in ¡°tex¡± to op in latex-mode
 (add-to-list 'auto-mode-alist '("\\.tex\\'" . latex-mode))
+
+;; AucTeX
+(setq TeX-auto-save t)
+(setq TeX-parse-self t)
+(setq TeX-PDF-mode t)
+(setq latex-run-command "pdflatex")
+; Turn on RefTeX for AUCTeX
+(add-hook 'LaTeX-mode-hook 'turn-on-reftex)
+; Make RefTeX interact with AUCTeX
+(setq reftex-plug-into-AUCTeX t)
 
 ;; enable automatic spell check for latex files
 (setq ispell-program-name "hunspell")
@@ -177,3 +179,5 @@ same directory as the org-buffer and insert a link to this file."
 
 (add-hook 'LaTeX-mode-hook 'flyspell-mode)
 (add-hook 'LaTeX-mode-hook 'flyspell-buffer)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
