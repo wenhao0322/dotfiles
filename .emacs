@@ -174,10 +174,9 @@ same directory as the org-buffer and insert a link to this file."
 (setq reftex-plug-into-AUCTeX t)
 
 ;; enable automatic spell check for latex files
-(setq ispell-program-name "hunspell")
+(setq ispell-program-name "aspell")
 (setq ispell-dictionary "english")
 
 (add-hook 'LaTeX-mode-hook 'flyspell-mode)
 (add-hook 'LaTeX-mode-hook 'flyspell-buffer)
-
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
