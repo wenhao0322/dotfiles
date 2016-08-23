@@ -151,7 +151,6 @@ same directory as the org-buffer and insert a link to this file."
 (add-hook 'python-mode-hook 'my-python-mode-hook)
 
 ;; set the space between the line number and the code region
-
 (unless (display-graphic-p)
     (setq linum-format "%d  "))
 
@@ -168,3 +167,13 @@ same directory as the org-buffer and insert a link to this file."
 	"Major mode for editing Markdown files" t)
 (add-to-list 'auto-mode-alist '("\\.markdown\\'". markdown-mode))
 (add-to-list 'auto-mode-alist '("\\.md\\'". markdown-mode))
+
+;; setup files ending in ¡°tex¡± to op in latex-mode
+(add-to-list 'auto-mode-alist '("\\.tex\\'" . latex-mode))
+
+;; enable automatic spell check for latex files
+(setq ispell-program-name "hunspell")
+(setq ispell-dictionary "english")
+
+(add-hook 'LaTeX-mode-hook 'flyspell-mode)
+(add-hook 'LaTeX-mode-hook 'flyspell-buffer)
