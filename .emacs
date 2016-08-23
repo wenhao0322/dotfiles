@@ -160,7 +160,7 @@ same directory as the org-buffer and insert a link to this file."
   "/opt/local/bin" ":"
  (getenv "PATH")))
 
-;; setup files ending in ¡°tex¡± to op in latex-mode
+;; enable latex-mode for .tex files
 (add-to-list 'auto-mode-alist '("\\.tex\\'" . latex-mode))
 
 ;; AucTeX
