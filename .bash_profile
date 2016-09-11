@@ -32,10 +32,6 @@ function prompt {
 
 prompt
 
-# added by Anaconda 2.3.0 installer
-# export PATH="/Users/Andy/anaconda/bin:$PATH"
-# export PATH=/usr/local/bin:(...)
-
 # added to solve ValueError
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
