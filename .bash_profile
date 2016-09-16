@@ -59,3 +59,6 @@ alias octave='octave-cli'
 alias ls='ls -GFh'
 alias ll='ls -l'
 alias lla='ls -l -a'
+
+# alia for hosts file
+alias openhost='sudo emacs /private/etc/hosts'

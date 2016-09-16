@@ -179,4 +179,10 @@ same directory as the org-buffer and insert a link to this file."
 
 (add-hook 'LaTeX-mode-hook 'flyspell-mode)
 (add-hook 'LaTeX-mode-hook 'flyspell-buffer)
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; Easy environment;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(add-to-list 'org-structure-template-alist
+             '("eq" "\\begin{equation}\n?\n\\end{equation}"))
+(add-to-list 'org-structure-template-alist
+             '("al" "\\begin{align}\n?\n\\end{align}"))
