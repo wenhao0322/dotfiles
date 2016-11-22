@@ -186,3 +186,6 @@ same directory as the org-buffer and insert a link to this file."
              '("eq" "\\begin{equation}\n?\n\\end{equation}"))
 (add-to-list 'org-structure-template-alist
              '("al" "\\begin{align}\n?\n\\end{align}"))
+(put 'upcase-region 'disabled nil)
+(add-to-list 'org-structure-template-alist
+	     '("C" "#+begin_comment\n?\n#+end_comment"))
