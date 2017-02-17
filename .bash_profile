@@ -53,7 +53,7 @@ alias emacs='emacs -nw'
 alias home='cd /Users/Andy'
 
 # always run octave in shell
-alias octave='octave-cli'
+# alias octave='octave-cli'
 
 # customize ls
 alias ls='ls -GFh'
@@ -66,8 +66,4 @@ alias openhost='sudo emacs /private/etc/hosts'
 ##
 # Your previous /Users/Andy/.bash_profile file was backed up as /Users/Andy/.bash_profile.macports-saved_2016-11-08_at_00:34:21
 ##
-
-# MacPorts Installer addition on 2016-11-08_at_00:34:21: adding an appropriate PATH variable for use with MacPorts.
-export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
-# Finished adapting your PATH environment variable for use with MacPorts.
 
